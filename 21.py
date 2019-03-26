@@ -31,7 +31,7 @@ class LinkedList:
             return
         while temp.next is not None: 
             if temp.data == temp.next.data: 
-                temp.next = None
+                temp.next = None #set to none so we can skip this node
                 temp.next = temp.next.next 
             else: 
                 temp = temp.next
