@@ -9,14 +9,14 @@ class LinkedList:
 
     def __init__(self):
         self.head = None
-    
+        
     def printList(self): #traverse a linked list
         temp = self.head
-        while temp:
+        while temp.next:
             print(temp.data)
             temp = temp.next
     
-    def removeDuplicates(self): 
+    def removeDuplicates(self): #remove duplicates for an sorted list
         temp = self.head 
         if temp is None: 
             return
