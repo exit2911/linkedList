@@ -1,8 +1,8 @@
 """
 2.1
 
-remove duplicates from an unsorted linked list
-FOLLOW UP: what if temporary buffer is not allowed
+remove duplicates from an unsorted linked list with temporary buffer
+
 
 """
 
