@@ -1,5 +1,5 @@
 """
-print kth to last element in the linked list
+print kth to last element in a linked list
 
 """
 class Node:
