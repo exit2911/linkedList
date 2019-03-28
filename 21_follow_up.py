@@ -15,7 +15,7 @@ class LinkedList:
     
     def printList(self): #traverse a linked list
         temp = self.head
-        while temp.next != None:
+        while temp:
             print(temp.data)
             temp = temp.next
     
