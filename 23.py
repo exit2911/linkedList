@@ -1,3 +1,11 @@
+"""
+
+delete the middle node
+use a counter and skip to next node when reach the node we want to delete
+the middle node is the result of the list size floor divided by 2
+
+"""
+
 class Node:
     
     def __init__(self,data):
