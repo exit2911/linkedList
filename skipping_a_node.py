@@ -19,19 +19,26 @@ class LinkedList:
             
             
     def print_skip(self):
-        
+        # find the size of the list, then roughly find the middle node by floor dividing the size by 2
         node = self.head
+        current = self.head
         count = 0
-        final = 2
+        size = 0
         while node:
             
-            count += 1
-            print(node.data)
+            size += 1
+            node = node.next            
+        mark = size//2
+        
+        while current:
             
-            if count == final:
-                node = node.next.next
+            count += 1
+            print(current.data)
+            
+            if count == mark:
+                current = current.next.next
             else:
-                node = node.next
+                current = current.next
                 
              
         
@@ -43,12 +50,13 @@ second = Node(2)
 third = Node(3)
 fourth = Node(4)
 fifth = Node(1)
-
+sixth = Node(1)
 
 
 llist.head.next = second
 second.next = third
 third.next = fourth
 fourth.next = fifth
+fifth.next = sixth
 
 llist.print_skip()
