@@ -1,18 +1,13 @@
 """
 write code to partition a linked list around a value x such that all nodes 
 less than x come before x and all nodes greater than x are on the right
-
 if x is within the linked list, x can be anywhere in the right partition 
-
 tips:
     
     use 2 linked lists, one with values less than x and one with values that are equal to or greater than x
     iterate through the entire linked list
-
 - randomly add one node in front of another. then assemble the list without initialization
 """
-
-
 
 
 class Node:
@@ -54,29 +49,28 @@ class LinkedList:
     def partition(self,partition):
       
         node = self.head
-        
+        smaller = []
+        larger = []
         while node:
             
             if node.data < partition:
-                left_node = Node(node.data)
-                left_node.next = self.head
-                self.head = left_node
-            else:
+                smaller.append(node.data)
+          
                 
-              while left_node:
-                  
-                  
-                  if left_node.next == None:
-                      
-                      left_node.next = Node(node.data)
+            else: 
+                larger.append(node.data)
+            node = node.next          
+        con_list = smaller + larger                
+        result_list = self.head
+        for i in range(len(con_list)):
+            new_node = Node(con_list[i])
             
-                  else:
-                      
-                      left_node = left_node.next
-        node = node.next          
-                      
-                      
-        return left_node
+            new_node.next = self.head
+            self.head = new_node
+    
+        return result_list   
+                  
+       
     
         
       
@@ -99,4 +93,3 @@ if __name__ == "__main__":
     llist.printList()
     
     
-
