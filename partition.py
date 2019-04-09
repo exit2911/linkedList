@@ -5,8 +5,8 @@ if x is within the linked list, x can be anywhere in the right partition
 tips:
     
     use 2 linked lists, one with values less than x and one with values that are equal to or greater than x
-    iterate through the entire linked list
-- randomly add one node in front of another. then assemble the list without initialization
+    iterate through the entire linked list.
+    add one node in front of another. then assemble the list without initialization
 """
 
 
