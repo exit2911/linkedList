@@ -55,12 +55,16 @@ class LinkedList:
             
             if node.data < partition:
                 smaller.append(node.data)
-          
-                
+               
             else: 
                 larger.append(node.data)
             node = node.next          
-        con_list = smaller + larger                
+        con_list = smaller + larger  
+        con_list.reverse()
+      
+        return con_list
+
+    def partition_assem(self,con_list):          
         result_list = self.head
         for i in range(len(con_list)):
             new_node = Node(con_list[i])
@@ -76,10 +80,10 @@ class LinkedList:
       
         
 if __name__ == "__main__":
+   
     
     
-    
-        
+    new_llist = LinkedList()
     llist = LinkedList()
     llist.head = Node(5)
     second = Node(2)
@@ -89,7 +93,8 @@ if __name__ == "__main__":
     llist.head.next = second
     second.next = third
     third.next = fourth
-    llist.partition(3)
-    llist.printList()
     
+    con_list = llist.partition(5)
+    new_llist.partition_assem(con_list)
+    new_llist.printList()
     
