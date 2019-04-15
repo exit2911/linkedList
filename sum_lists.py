@@ -11,6 +11,8 @@ Created on Sun Apr 14 16:08:31 2019
 
 @author: vyho
 @location: Filicori Zecchini
+
+check the lengths. if one of the 2 has a none node while the other is not, then the other's node is 0
 """
 
 
