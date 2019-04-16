@@ -15,8 +15,6 @@ Created on Sun Apr 14 16:08:31 2019
 check the lengths. if one of the 2 has a none node while the other is not, then the other's node is 0
 """
 
-
-
 class Node: 
   
     # Constructor to initialize the node object 
@@ -70,9 +68,9 @@ class LinkedList:
                 if self.head == None:
                     self.head = temp
                 else:
-                    prev.next = temp
-            
-                prev = temp                
+                    temp.next = self.head 
+                    self.head = temp 
+               # prev = temp                
                 if fList:
                     fList = fList.next
                     
@@ -84,9 +82,9 @@ first = LinkedList()
 second = LinkedList() 
   
 # Create first list 
-first.push(5) 
-first.push(6) 
 first.push(9) 
+first.push(1) 
+first.push(1) 
 print ("First List is ") 
 first.printList() 
 
@@ -101,4 +99,3 @@ res = LinkedList()
 res.addTwoLists(first.head, second.head) 
 print ("\nResultant list is ")
 res.printList() 
-  
