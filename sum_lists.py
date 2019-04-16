@@ -33,12 +33,13 @@ class LinkedList:
             new_node = Node(new_data) 
             new_node.next = self.head 
             self.head = new_node 
+        
         def printList(self): 
             temp = self.head 
             while(temp): 
                 print (temp.data)
                 temp = temp.next        
-        
+               
         def addTwoLists(self,fList,sList):
             
             temp = None
@@ -56,7 +57,7 @@ class LinkedList:
                 if sum < 10:
                     
                     carry = 0
-                    
+                 
                 else:
                 
                     carry = 1
