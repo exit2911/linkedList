@@ -1,4 +1,18 @@
 
+
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Apr 17 22:23:43 2019
+
+@author: vyho
+"""
+
+#import the append function or create a new class
+
+#count the difference in digits
+
+#how about just add digits to the front?
 class Node: 
   
     # Constructor to initialize the node object 
