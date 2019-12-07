@@ -1,6 +1,6 @@
 """
 
-linked list examples
+doubly linked list
 
 add to front
 
